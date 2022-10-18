@@ -1,4 +1,4 @@
 package src;
 
-public class OfferingList {
+public class OfferingList extends ArrayList{
 }
