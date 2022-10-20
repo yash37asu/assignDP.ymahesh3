@@ -1,4 +1,6 @@
 package src;
-public class ClassProductList extends ArrayList {
-    public void accept(NodeVisitor visitor){}
+
+public class ClassProductList {
+    public void accept(NodeVisitor visitor) {
+    }
 }

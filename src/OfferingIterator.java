@@ -1,11 +1,11 @@
 package src;
 
 public class OfferingIterator implements ListIterator {
-    public boolean hasNext(){
+    public boolean hasNext() {
         return false;
     }
 
-    public Offering Next(){
+    public Offering Next() {
         return null;
     }
 
