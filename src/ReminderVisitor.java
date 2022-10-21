@@ -5,12 +5,12 @@ public class ReminderVisitor extends NodeVisitor {
 
     @Override
     public void visitProduct(Product product) {
-
+        System.out.println("Product visited");
     }
 
     @Override
     public void visitTrading(Trading trading) {
-
+        System.out.println("Trade visited");
     }
 
     @Override

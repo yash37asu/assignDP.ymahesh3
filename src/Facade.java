@@ -26,7 +26,7 @@ public class Facade {
     }
 
     public boolean login() throws  IOException{
-        System.out.print("\n"+"FACADE PATTERN is implemented here"+"\n");
+        System.out.print("\n"+"FACADE PATTERN implementation begins"+"\n");
         newUser = newPerson.loginMethod();
         return true;
     }
@@ -70,6 +70,7 @@ public class Facade {
 
         while((str = br.readLine())!=null)
         {
+
             String[] lines = str.split("---");
             userList.add(lines[0]);
             userCategories.add(Integer.parseInt(lines[1]));
@@ -161,13 +162,14 @@ public class Facade {
             pName.add(splitStr[1]);
         }
         Scanner scanner = new Scanner(System.in);
-        System.out.print("\n Please enter product type: ");
+        System.out.print("\n Please enter product type from above: ");
         int pType = scanner.nextInt();
 
         System.out.print("\n Which trading option would you have: ");
         System.out.print("\n 1)Add Trading option");
         System.out.println("\n 2)View Trading option");
         int tradeType = scanner.nextInt();
+//        tradeType -= 1;
 
 
         SelectProduct(productLists.get(pType-1));
@@ -179,12 +181,14 @@ public class Facade {
             if(nProductCategory == 0)
             {
                 ProductMenu p1 = new MeatProductMenu();
+                System.out.println("\n"+"FACTORY PATTERN implementation begins here");
                 p1.showAddButton();
                 addTrading(newUser.userName, newUser.userCategory, productLists.get(pType-1));
             }
             else if(nProductCategory == 1)
             {
                 ProductMenu p2 = new ProduceProductMenu();
+                System.out.println("\n"+"FACTORY PATTERN implementation begins here");
                 p2.showAddButton();
                 addTrading(newUser.userName, newUser.userCategory, productLists.get(pType-1));
             }
@@ -195,14 +199,14 @@ public class Facade {
             if(nProductCategory == 0)
             {
                 ProductMenu p1 = new MeatProductMenu();
-                System.out.println("\n"+"FACTORY PATTERN helps in showing menu according to user & product");
+                System.out.println("\n"+"FACTORY PATTERN implementation begins here");
                 p1.showViewButton();
                 viewTrading();
             }
             else if(nProductCategory == 1)
             {
                 ProductMenu p2 = new ProduceProductMenu();
-                System.out.println("\n"+"FACTORY PATTERN helps in showing menu according to user & product");
+                System.out.println("\n"+"FACTORY PATTERN implementation begins here");
                 p2.showViewButton();
                 viewTrading();
             }

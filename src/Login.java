@@ -23,7 +23,7 @@ public class Login {
 
         String str;
 
-        boolean allow_user = true;
+//        boolean allow_user = true;
         boolean is_buyer = false;
         boolean is_seller = false;
 
@@ -66,7 +66,7 @@ public class Login {
             }
         }
 
-
+        System.out.println("BRIDGE PATTERN is implemented here");
         if (user_cat == 0) {
             if (is_buyer) {
                 System.out.print("\n The Entered user is a : Buyer");
@@ -75,19 +75,19 @@ public class Login {
                 System.exit(0);
             }
             Person newBuyer = new Buyer(new MeatProductMenu());
-            System.out.print("\n" + "BRIDGE PATTERN is implemented here" + "\n");
+//            System.out.print("\n" + "BRIDGE PATTERN is implemented here" + "\n");
             newBuyer.added();
             newBuyer.showMenu();
         } else if (user_cat == 1) {
-            if (is_seller == true) {
-                System.out.print("\n The Entered User is a : Seller");
+            if (is_seller) {
+                System.out.print("\n The Entered User is a : Seller\n");
             } else {
                 System.out.print("\n User does not exist!");
-                allow_user = false;
+//                allow_user = false;
                 System.exit(0);
             }
             Person newSeller = new Seller(new MeatProductMenu());
-            System.out.print("\n" + "BRIDGE PATTERN is implemented here" + "\n");
+//            System.out.print("\n" + "BRIDGE PATTERN is implemented here" + "\n");
             newSeller.showMenu();
         }
         return newUser;
