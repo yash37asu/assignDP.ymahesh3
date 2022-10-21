@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class ProductIterator implements ListIterator {
 
-    ArrayList<String> Products = new ArrayList<String>();
+    ArrayList<String> Products = new ArrayList<>();
     int temp;
     public ProductIterator() throws IOException
     {
@@ -25,11 +25,7 @@ public class ProductIterator implements ListIterator {
     }
     @Override
     public boolean hasNext() {
-        if(temp<Products.size())
-        {
-            return true;
-        }
-        return false;
+        return temp < Products.size();
     }
 
     @Override

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         boolean loop = true;
         @SuppressWarnings("resource")
         Scanner stayLoop = new Scanner(System.in);
@@ -40,7 +40,8 @@ public class Main {
 
             if (choice == 2) {
                 System.out.print("\n You have exited the system!");
-                System.exit(0);
+                loop=false;
+//                System.exit(0);
             }
         }
     }
